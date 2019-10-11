@@ -58,7 +58,7 @@ class Weather extends React.Component {
     }
 
     return(
-      <ImageBackground source={ this.state.dataSource.weather[0].description=='few clouds' ? require('./images/few_clouds.jpg') : require('./images/cl.jpg')} style={{width:'100%'}}>
+      <ImageBackground source={ this.state.dataSource.weather[0].description=='few clouds' ? require('../images/few_clouds.jpg') : require('../images/cl.jpg')} style={{width:'100%'}}>
       <View style={{ flexGrow: 1, alignItems: 'center', justifyContent: 'center' }}>
         <Text style={{ fontSize: 20, color: 'white', fontWeight: 'bold'}} >Today's weather is {this.state.dataSource.weather[0].description} , with {(this.state.dataSource.main.temp-273.15).toFixed(0)}°C</Text>
         {console.log(this.state.dataSource)}
